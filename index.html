@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مِركاز — قهوة مختصة | Markaz Specialty Coffee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:TSD;src:url(fonts/tsd.otf);font-weight:700;font-display:swap}
+@font-face{font-family:TS;src:url(fonts/ts.otf);font-weight:400;font-display:swap}
+@font-face{font-family:TS;src:url(fonts/tsm.otf);font-weight:500;font-display:swap}
+@font-face{font-family:Fraunces;src:url(fonts/fraunces.ttf);font-weight:100 900;font-display:swap}
+@font-face{font-family:Plex;src:url(fonts/plex.ttf);font-weight:100 700;font-display:swap}
+:root{--or:#CF692C;--or2:#B95A22;--cr:#FDF7ED;--sand:#D9C3A5;--rs:#3B2418;--es:#1A120D;--od:#A04E1F;--mu:#6B5443;--w:#FFFDF9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{margin:0;font-family:TS,Plex,sans-serif;color:var(--rs);background:var(--cr);-webkit-font-smoothing:antialiased}
+html[lang=en] body{font-family:Plex,TS,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:TSD,Fraunces,serif;font-weight:700;margin:0;line-height:1.15}
+html[lang=en] h1,html[lang=en] h2,html[lang=en] h3{font-family:Fraunces,TSD,serif;font-weight:600}
+.dot{display:inline-block;width:.22em;height:.22em;border-radius:50%;background:var(--or);margin-inline-start:.08em;vertical-align:baseline}
+.on-or .dot{background:var(--es)}
+.eyebrow{font-family:Plex;font-weight:600;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--od);direction:ltr;display:inline-block}
+.on-or .eyebrow,.on-dark .eyebrow{color:var(--es)}
+.on-dark .eyebrow{color:var(--or)}
+.hand{font-family:'Aref Ruqaa',serif;font-weight:700}
+.ic{display:inline-block;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:16px 30px;font:500 18px TS,Plex,sans-serif;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;min-height:52px}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--es);outline-offset:3px}
+.btn-dark{background:var(--es);color:var(--cr)}
+.btn-cream{background:var(--cr);color:var(--es)}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn-or{background:var(--or);color:var(--es)}
+section{position:relative;overflow:hidden}
+.on-or{background:var(--or);color:var(--cr)}
+.on-dark{background:var(--es);color:var(--cr)}
+.sec{padding:110px 0}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 56px}
+.sec-head h2{font-size:clamp(40px,6vw,72px);margin-top:12px}
+.sec-head p{font-size:20px;line-height:1.8;margin:16px 0 0;color:var(--mu)}
+.on-or .sec-head p{color:var(--es)}
+.on-dark .sec-head p{color:#CFC2B4}
+.side-text{position:absolute;top:50%;font:500 12px Plex;letter-spacing:.32em;opacity:.7;direction:ltr;writing-mode:vertical-rl;transform:translateY(-50%)}
+.side-l{left:14px;transform:translateY(-50%) rotate(180deg)} .side-r{right:14px}
+@media(max-width:800px){.side-text{display:none}}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(253,247,237,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,195,165,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:500;font-size:17px}
+.nav ul a:hover{color:var(--od)}
+.nav-act{display:flex;gap:10px;align-items:center}
+.icbtn{position:relative;width:48px;height:48px;border-radius:50%;border:0;background:var(--w);box-shadow:0 4px 14px rgba(59,36,24,.1);color:var(--rs);cursor:pointer;display:flex;align-items:center;justify-content:center;font:600 15px Plex}
+.count{position:absolute;top:-4px;inset-inline-end:-4px;min-width:22px;height:22px;border-radius:11px;background:var(--or);color:var(--es);font:700 12px Plex;display:flex;align-items:center;justify-content:center;padding:0 5px;transform:scale(0);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.count.show{transform:scale(1)}
+@media(max-width:860px){.nav ul{display:none}}
+/* hero */
+.hero{min-height:calc(100vh - 78px);display:flex;align-items:center;padding:60px 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(60px,9vw,128px);white-space:nowrap}
+.hero p{font-size:22px;line-height:1.8;color:var(--es);margin:22px 0 34px;max-width:520px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.orbit{position:relative;aspect-ratio:1;max-width:560px;width:100%;margin:0 auto}
+.orbit .cup{position:absolute;inset:0;border-radius:50%;overflow:hidden}
+.orbit .cup img{width:100%;height:100%;object-fit:cover;object-position:50% 47%;transform:scale(1.9)}
+.ring{position:absolute;border:2px dashed rgba(253,247,237,.55);border-radius:50%;inset:var(--in);animation:spin var(--s) linear infinite}
+.ring .chip{position:absolute;top:var(--y);left:var(--x);transform:translate(-50%,-50%);background:var(--cr);color:var(--es);padding:9px 18px;border-radius:999px;font:500 15px TS,Plex;white-space:nowrap;display:flex;gap:8px;align-items:center;box-shadow:0 8px 20px rgba(26,18,13,.18);animation:counter var(--s) linear infinite}
+.ring .chip i{width:9px;height:9px;border-radius:50%;background:var(--or)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring .chip{animation-name:counter}
+@keyframes counter{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
+.hero-note{position:absolute;bottom:4%;inset-inline-start:-4%;font-size:30px;color:var(--es)}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.hero .ctas{justify-content:center}}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about .photo{border-radius:36px;overflow:hidden;background:var(--or);aspect-ratio:4/5}
+.about .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.about h2{font-size:clamp(40px,5.5vw,66px);margin:12px 0 20px}
+.about p{font-size:19px;line-height:1.9;color:var(--mu)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.pill{background:var(--w);border-radius:24px;padding:22px 18px;box-shadow:0 10px 30px rgba(59,36,24,.08)}
+.pill .n{font:600 26px Fraunces;color:var(--or);direction:ltr}
+.pill h3{font-size:24px;margin:6px 0}
+.pill p{font-size:15px;line-height:1.6;margin:0}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}}
+/* menu */
+.tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px}
+.tab{border:0;border-radius:999px;padding:12px 30px;font:500 18px TS,Plex;cursor:pointer;background:rgba(253,247,237,.2);color:var(--cr);min-height:48px}
+.tab[aria-selected=true]{background:var(--cr);color:var(--es)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mcard{background:var(--w);color:var(--rs);border-radius:30px;overflow:hidden;box-shadow:0 20px 40px rgba(26,18,13,.18);transition:transform .3s}
+.mcard:hover{transform:translateY(-6px) rotate(-.5deg)}
+.mcard .im{aspect-ratio:1;background:#F6EDE1;overflow:hidden}
+.mcard .im img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.mcard .bd{padding:20px 24px 24px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.mcard h3{font-size:28px}
+.mcard .en{font:italic 16px Fraunces;color:var(--od);direction:ltr}
+.price{font:600 22px Fraunces;color:var(--rs);white-space:nowrap}
+.price small{font:500 14px TS,Plex;color:var(--mu)}
+.hidden{display:none!important}
+@media(max-width:900px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.menu-grid{grid-template-columns:1fr}}
+/* shop */
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pcard{background:var(--w);border-radius:34px;overflow:hidden;box-shadow:0 20px 50px rgba(59,36,24,.1);display:flex;flex-direction:column}
+.pvis{position:relative;aspect-ratio:4/4.4;background:var(--or);overflow:hidden}
+.pvis .base{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.plogo{position:absolute;left:50%;top:43%;width:23%;transform:translateX(-50%)}
+.plabel{position:absolute;left:50%;top:72%;transform:translateX(-50%);padding:6px 16px;border-radius:8px;font:600 13px Plex;letter-spacing:.14em;text-transform:uppercase;direction:ltr;white-space:nowrap}
+.ptag{position:absolute;top:18px;inset-inline-start:18px;background:var(--es);color:var(--cr);border-radius:999px;padding:6px 14px;font:500 14px TS,Plex}
+.pbd{padding:26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.pbd h3{font-size:30px}
+.pbd .origin{font:italic 17px Fraunces;color:var(--od);direction:ltr;text-align:start}
+html[dir=rtl] .pbd .origin{text-align:right}
+.notes{display:flex;flex-wrap:wrap;gap:8px}
+.notes span{background:#F6EDE1;border-radius:999px;padding:6px 14px;font-size:14px}
+.pfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:10px}
+.add{background:var(--rs);color:var(--cr)}
+.add.done{background:var(--or);color:var(--es)}
+@media(max-width:900px){.shop-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+/* journey */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:var(--cr);color:var(--rs);border-radius:30px;overflow:hidden}
+.step .im{aspect-ratio:1;overflow:hidden}
+.step .im img{width:100%;height:100%;object-fit:cover}
+.step .bd{padding:20px 22px 26px}
+.step .n{font:600 40px Fraunces;color:var(--or);direction:ltr;text-align:start;line-height:1}
+html[dir=rtl] .step .n{text-align:right}
+.step h3{font-size:28px;margin:10px 0 6px}
+.step p{margin:0;font-size:16px;line-height:1.7;color:var(--mu)}
+@media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+/* offer */
+.coupon{position:relative;max-width:900px;margin:0 auto;background:var(--cr);color:var(--rs);border-radius:40px;display:grid;grid-template-columns:260px 1fr;min-height:320px}
+.coupon:before,.coupon:after{content:"";position:absolute;top:50%;width:64px;height:64px;margin-top:-32px;border-radius:50%;background:var(--es)}
+.coupon:before{left:-32px}.coupon:after{right:-32px}
+.coupon .l{display:flex;align-items:center;justify-content:center;border-inline-start:5px dashed var(--sand);color:var(--or)}
+html[dir=rtl] .coupon .l{order:2}
+.coupon .r{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;gap:10px}
+.coupon h2{font-size:clamp(44px,6vw,76px)}
+.coupon h2 span{color:var(--od)}
+.coupon .stamp{white-space:nowrap;margin-top:8px;background:var(--es);color:var(--cr);border-radius:999px;padding:10px 26px;font:700 20px TSD,Fraunces;transform:rotate(-3deg)}
+@media(max-width:700px){.coupon{grid-template-columns:1fr}.coupon .l{border:0;border-top:5px dashed var(--sand);padding:30px;order:2}}
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:stretch}
+.visit .photo{border-radius:36px;overflow:hidden;min-height:420px}
+.visit .photo img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.info{background:var(--w);border-radius:36px;padding:40px;box-shadow:0 20px 50px rgba(59,36,24,.08);display:flex;flex-direction:column;gap:22px;justify-content:center}
+.info h2{font-size:clamp(40px,5vw,60px)}
+.irow{display:flex;gap:16px;align-items:flex-start}
+.irow .ic{width:30px;height:30px;color:var(--or);flex-shrink:0;margin-top:3px}
+.irow b{display:block;font-family:TSD,Fraunces;font-size:22px}
+.irow span{color:var(--mu);font-size:17px}
+@media(max-width:900px){.visit .wrap{grid-template-columns:1fr}}
+/* footer */
+footer{background:var(--es);color:var(--cr);padding:80px 0 40px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:40px}
+footer img{height:56px;width:auto}
+footer p{color:#CFC2B4;line-height:1.8}
+footer h4{font-family:TSD,Fraunces;font-size:22px;margin:0 0 14px}
+footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+footer ul a{text-decoration:none;color:#E8DCCD}
+.news{display:flex;gap:8px;background:rgba(253,247,237,.08);border-radius:999px;padding:6px}
+.news input{flex:1;min-width:0;border:0;background:transparent;color:var(--cr);font:16px TS,Plex;padding:0 16px;min-height:48px}
+.news input::placeholder{color:#B9AA99}
+.news-msg{min-height:24px;color:var(--or);margin-top:10px;font-size:15px}
+.fbot{margin-top:60px;padding-top:24px;border-top:1px solid rgba(253,247,237,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#B9AA99;font-size:14px}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr}}
+/* cart drawer */
+.scrim{position:fixed;inset:0;background:rgba(26,18,13,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:80}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{visibility:hidden;position:fixed;top:0;bottom:0;inset-inline-end:0;width:min(440px,100%);background:var(--cr);z-index:90;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .4s cubic-bezier(.2,.8,.2,1),visibility .4s;box-shadow:-20px 0 60px rgba(26,18,13,.2)}
+html[dir=rtl] .drawer{transform:translateX(-105%)}
+.drawer.open{transform:none!important;visibility:visible}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:24px 26px;border-bottom:1px solid var(--sand)}
+.dh h3{font-size:30px}
+.items{flex:1;overflow:auto;padding:18px 26px;display:flex;flex-direction:column;gap:14px}
+.item{display:flex;gap:14px;align-items:center;background:var(--w);border-radius:20px;padding:12px}
+.item .th{width:70px;height:70px;border-radius:14px;background:var(--or);overflow:hidden;flex-shrink:0}
+.item .th img{width:100%;height:100%;object-fit:cover}
+.item .nm{flex:1}
+.item .nm b{display:block;font-family:TSD,Fraunces;font-size:20px}
+.item .nm span{font-size:14px;color:var(--mu)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:34px;height:34px;border-radius:50%;border:0;background:#F1E6D6;color:var(--rs);font:600 18px Plex;cursor:pointer}
+.empty{text-align:center;color:var(--mu);padding:60px 0;font-size:18px}
+.df{padding:22px 26px 28px;border-top:1px solid var(--sand);display:flex;flex-direction:column;gap:14px}
+.tot{display:flex;justify-content:space-between;font-family:TSD,Fraunces;font-size:24px}
+.df .btn{justify-content:center}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,220%);background:var(--es);color:var(--cr);padding:14px 26px;border-radius:999px;z-index:100;transition:transform .4s cubic-bezier(.34,1.56,.64,1);font-size:16px;max-width:calc(100% - 40px);text-align:center}
+.toast.show{transform:translate(-50%,0)}
+/* reveal */
+.rv{opacity:0;transform:translateY(40px) scale(.98);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.ring,.ring .chip{animation:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a href="#top" aria-label="مِركاز"><img src="img/logo.png" alt="شعار مِركاز"></a>
+  <nav aria-label="القائمة الرئيسية"><ul>
+   <li><a href="#about" data-en="About">من نحن</a></li>
+   <li><a href="#menu" data-en="Menu">القائمة</a></li>
+   <li><a href="#shop" data-en="Shop">المتجر</a></li>
+   <li><a href="#journey" data-en="Our journey">رحلتنا</a></li>
+   <li><a href="#visit" data-en="Visit">زورونا</a></li>
+  </ul></nav>
+  <div class="nav-act">
+   <button class="icbtn" id="langBtn" aria-label="Switch to English">EN</button>
+   <button class="icbtn" id="cartBtn" aria-label="السلة"><span class="ic" style="--i:url(icons/bag.png);width:24px;height:24px"></span><span class="count" id="count">0</span></button>
+  </div>
+ </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero on-or">
+ <span class="side-text side-l">SPECIALTY COFFEE</span><span class="side-text side-r">MARKAZ · 2026</span>
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">Where your day centers</span>
+   <h1 data-en="The center<br>of your day">مركز يومك<span class="dot"></span></h1>
+   <p data-en="Specialty coffee, roasted with care in small batches, and served at the one point your whole day revolves around: your cup.">قهوة مختصة نحمّصها بعناية وبكميات صغيرة، ونقدّمها في النقطة التي يدور حولها يومك كله: فنجانك.</p>
+   <div class="ctas"><a class="btn btn-dark" href="#shop" data-en="Shop beans">اطلب الحبوب</a><a class="btn btn-ghost" href="#menu" data-en="See the menu">شوف القائمة</a></div>
+  </div>
+  <div class="orbit rv" aria-hidden="true">
+   <div class="cup"><img src="img/hero-cup.jpg" alt=""></div>
+   <div class="ring" style="--in:14%;--s:38s"><span class="chip" style="--x:85%;--y:15%"><i></i><span data-en="Meetings">اجتماعات</span></span></div>
+   <div class="ring" style="--in:2%;--s:52s"><span class="chip" style="--x:6%;--y:38%"><i></i><span data-en="Emails">إيميلات</span></span><span class="chip" style="--x:90%;--y:78%"><i></i><span data-en="Traffic">زحمة</span></span></div>
+   <div class="ring" style="--in:26%;--s:30s"><span class="chip" style="--x:12%;--y:85%"><i></i><span data-en="Errands">مشاوير</span></span></div>
+   <div class="hero-note hand" data-en="and you're here">وأنت هنا</div>
+  </div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about sec" id="about">
+ <div class="wrap">
+  <div class="photo rv"><img src="img/salem.jpg" alt="رجل يحتضن كوب قهوة مِركاز عملاقاً" loading="lazy"></div>
+  <div class="rv">
+   <span class="eyebrow">About Markaz</span>
+   <h2 data-en="Coffee is the center<br>the day revolves around">القهوة هي المركز<br>الذي يدور حوله اليوم<span class="dot"></span></h2>
+   <p data-en="«Markaz» means the center. We believe a cup of coffee is more than a drink: it is where the day begins and where conversations meet. We roast our own beans and prepare every cup as if it were the only one of your day.">«مِركاز» تعني المركز. نؤمن أن فنجان القهوة ليس مجرد مشروب، بل النقطة التي يبدأ منها اليوم وتلتقي عندها الأحاديث. نحمّص حبوبنا بأنفسنا، ونحضّر كل كوب كأنه الكوب الوحيد في يومك.</p>
+   <div class="pillars">
+    <div class="pill"><div class="n">01</div><h3 data-en="Roastery">محمصة</h3><p data-en="Small batches, roasted weekly.">نحمّص بكميات صغيرة كل أسبوع.</p></div>
+    <div class="pill"><div class="n">02</div><h3 data-en="Café">مقهى</h3><p data-en="A calm space to start your day.">مساحة هادئة تبدأ فيها يومك.</p></div>
+    <div class="pill"><div class="n">03</div><h3 data-en="Shop">متجر</h3><p data-en="Our beans, delivered home.">حبوبنا تصلك إلى بيتك.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- MENU -->
+<section class="sec on-or" id="menu">
+ <span class="side-text side-l">SPECIALTY COFFEE</span><span class="side-text side-r">MARKAZ · 2026</span>
+ <div class="wrap">
+  <div class="sec-head rv"><span class="eyebrow">Our menu</span><h2 data-en="Six ways to start your day">ست طرق لتبدأ يومك<span class="dot"></span></h2></div>
+  <div class="tabs" role="tablist" aria-label="نوع المشروب">
+   <button class="tab" role="tab" aria-selected="true" data-f="all" data-en="All">الكل</button>
+   <button class="tab" role="tab" aria-selected="false" data-f="hot" data-en="Hot">ساخن</button>
+   <button class="tab" role="tab" aria-selected="false" data-f="cold" data-en="Cold">بارد</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+ </div>
+</section>
+
+<!-- SHOP -->
+<section class="sec" id="shop">
+ <div class="wrap">
+  <div class="sec-head rv"><span class="eyebrow">Shop beans</span><h2 data-en="Fresh from our roastery">طازجة من المحمصة<span class="dot"></span></h2><p data-en="Single-origin beans, roasted weekly and packed in 250 g bags.">محاصيل مختصة نحمّصها أسبوعياً، في أكياس 250 غ.</p></div>
+  <div class="shop-grid" id="shopGrid"></div>
+ </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="sec on-or" id="journey">
+ <span class="side-text side-l">SPECIALTY COFFEE</span><span class="side-text side-r">MARKAZ · 2026</span>
+ <div class="wrap">
+  <div class="sec-head rv"><span class="eyebrow">From farm to cup</span><h2 data-en="The bean's journey to your cup">رحلة الحبة إلى فنجانك<span class="dot"></span></h2></div>
+  <div class="steps">
+   <div class="step rv"><div class="im"><img src="img/bean.jpg" alt="حبة قهوة محمصة" loading="lazy"></div><div class="bd"><div class="n">01</div><h3 data-en="Sourcing">الاختيار</h3><p data-en="We taste every harvest from Ethiopia, Colombia and Yemen.">نتذوّق كل محصول من إثيوبيا وكولومبيا واليمن.</p></div></div>
+   <div class="step rv"><div class="im"><img src="img/roaster.jpg" alt="حبوب تُحمَّص" loading="lazy"></div><div class="bd"><div class="n">02</div><h3 data-en="Roasting">التحميص</h3><p data-en="Small batches every week, to keep every note.">بكميات صغيرة كل أسبوع لنحافظ على النكهة.</p></div></div>
+   <div class="step rv"><div class="im"><img src="img/v60-fahd.jpg" alt="باريستا يحضّر V60" loading="lazy"></div><div class="bd"><div class="n">03</div><h3 data-en="Brewing">التحضير</h3><p data-en="Our baristas brew every cup with care.">باريستا يحضّر كل كوب بعناية.</p></div></div>
+   <div class="step rv"><div class="im"><img src="img/hand.jpg" alt="يد تقدّم كوب قهوة" loading="lazy"></div><div class="bd"><div class="n">04</div><h3 data-en="Your cup">فنجانك</h3><p data-en="And the journey ends in your hand.">وتنتهي الرحلة في يدك.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- OFFER -->
+<section class="sec on-dark" id="offer">
+ <div class="wrap">
+  <div class="coupon rv">
+   <div class="l"><span class="ic" style="--i:url(icons/cup.png);width:150px;height:150px"></span></div>
+   <div class="r"><span class="eyebrow">Opening week offer</span><h2 data-en="Your first cup<br><span>is on us</span>">قهوتك الأولى<br><span>علينا</span></h2><div class="stamp" data-en="All opening week">طوال أسبوع الافتتاح</div></div>
+  </div>
+ </div>
+</section>
+
+<!-- VISIT -->
+<section class="sec visit" id="visit">
+ <div class="wrap">
+  <div class="photo rv"><img src="img/store.jpg" alt="واجهة مقهى مِركاز" loading="lazy"></div>
+  <div class="info rv">
+   <span class="eyebrow">Visit us</span>
+   <h2 data-en="Come to the center">تعال للمركز<span class="dot"></span></h2>
+   <div class="irow"><span class="ic" style="--i:url(icons/pin.png)"></span><div><b data-en="Flagship">الفرع الأول</b><span data-en="Al Aqiq, Riyadh">حي العقيق، الرياض</span></div></div>
+   <div class="irow"><span class="ic" style="--i:url(icons/clock.png)"></span><div><b data-en="Opening hours">ساعات العمل</b><span data-en="Daily · 6 AM – 1 AM">يومياً · 6 ص – 1 ص</span></div></div>
+   <div><a class="btn btn-dark" href="https://maps.google.com/?q=Al+Aqiq+Riyadh" data-en="Open in Maps">افتح الخريطة</a></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div><img src="img/logo-dark.png" alt="شعار مِركاز"><p data-en="Specialty coffee roastery and café. The center of your day.">محمصة ومقهى للقهوة المختصة. مركز يومك.</p></div>
+   <div><h4 data-en="Explore">تصفّح</h4><ul><li><a href="#menu" data-en="Menu">القائمة</a></li><li><a href="#shop" data-en="Shop">المتجر</a></li><li><a href="#visit" data-en="Visit us">زورونا</a></li></ul></div>
+   <div><h4 data-en="Join the center">انضم للمركز</h4><p data-en="New harvests and offers, first.">المحاصيل الجديدة والعروض، أولاً بأول.</p>
+    <form class="news" id="news"><label for="em" class="hidden">البريد الإلكتروني</label><input id="em" type="email" required placeholder="بريدك الإلكتروني" data-en-ph="Your email"><button class="btn btn-or" type="submit" data-en="Subscribe">اشترك</button></form>
+    <div class="news-msg" id="newsMsg" aria-live="polite"></div>
+   </div>
+  </div>
+  <div class="fbot"><span>© 2026 Markaz · مِركاز</span><span style="direction:ltr">Instagram · TikTok · X — @markaz.coffee</span></div>
+ </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="السلة" aria-hidden="true">
+ <div class="dh"><h3 data-en="Your cart">سلتك</h3><button class="icbtn" id="closeCart" aria-label="إغلاق">✕</button></div>
+ <div class="items" id="items"></div>
+ <div class="df"><div class="tot"><span data-en="Total">المجموع</span><span id="total">0</span></div><button class="btn btn-dark" id="checkout" data-en="Checkout">إتمام الطلب</button></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const MENU=[
+ {id:'esp',ar:'إسبريسو',en:'Espresso',p:14,t:'hot',img:'m-espresso'},
+ {id:'cor',ar:'كورتادو',en:'Cortado',p:17,t:'hot',img:'m-cortado'},
+ {id:'flw',ar:'فلات وايت',en:'Flat White',p:19,t:'hot',img:'m-flatwhite'},
+ {id:'v60',ar:'V60',en:'Pour Over',p:22,t:'hot',img:'m-v60'},
+ {id:'icl',ar:'آيس لاتيه',en:'Iced Latte',p:21,t:'cold',img:'m-iced'},
+ {id:'cbr',ar:'كولد برو',en:'Cold Brew',p:20,t:'cold',img:'m-coldbrew'}];
+const BEANS=[
+ {id:'eth',ar:'إثيوبيا يرغاتشيفي',en:'Ethiopia Yirgacheffe',o:'Yirgacheffe · Washed',p:89,lab:'#FDF7ED',labc:'#3B2418',tag:{ar:'محصول الأسبوع',en:'Weekly pick'},n:[['شوكولاتة داكنة','Dark chocolate'],['توت بري','Wild berry'],['حموضة متوازنة','Balanced acidity']]},
+ {id:'col',ar:'كولومبيا هويلا',en:'Colombia Huila',o:'Huila · Washed',p:79,lab:'#D9C3A5',labc:'#3B2418',n:[['كراميل','Caramel'],['تفاح أحمر','Red apple'],['قوام كريمي','Creamy body']]},
+ {id:'yem',ar:'اليمن حراز',en:'Yemen Haraz',o:'Haraz · Natural',p:119,lab:'#1A120D',labc:'#FDF7ED',tag:{ar:'إصدار محدود',en:'Limited'},n:[['تمر','Dates'],['بهارات دافئة','Warm spice'],['نكهة عميقة','Deep finish']]}];
+let lang='ar'; const cart={};
+const L=(a,e)=>lang==='ar'?a:e; const cur=v=>lang==='ar'?`${v} ر.س`:`SAR ${v}`;
+function renderMenu(f='all'){const g=document.getElementById('menuGrid');g.innerHTML=MENU.filter(m=>f==='all'||m.t===f).map(m=>`<article class="mcard"><div class="im"><img src="img/${m.img}.jpg" alt="${L(m.ar,m.en)}" loading="lazy"></div><div class="bd"><div><h3>${L(m.ar,m.en)}</h3>${lang==='ar'?`<div class="en">${m.en}</div>`:''}</div><div class="price">${cur(m.p)}</div></div></article>`).join('');}
+function renderShop(){document.getElementById('shopGrid').innerHTML=BEANS.map(b=>`<article class="pcard rv in"><div class="pvis"><img class="base" src="img/pouch.jpg" alt="${L('كيس حبوب ','Bean bag ')+L(b.ar,b.en)}" loading="lazy"><img class="plogo" src="img/logo-v-dark.png" alt=""><span class="plabel" style="background:${b.lab};color:${b.labc}">${b.en.split(' ')[0]}</span>${b.tag?`<span class="ptag">${L(b.tag.ar,b.tag.en)}</span>`:''}</div><div class="pbd"><h3>${L(b.ar,b.en)}</h3><div class="origin">${b.o} · 250 g</div><div class="notes">${b.n.map(x=>`<span>${L(x[0],x[1])}</span>`).join('')}</div><div class="pfoot"><span class="price">${cur(b.p)}</span><button class="btn add" data-id="${b.id}">${L('أضف للسلة','Add to cart')}</button></div></div></article>`).join('');
+ document.querySelectorAll('.add').forEach(btn=>btn.addEventListener('click',()=>{add(btn.dataset.id);btn.classList.add('done');btn.textContent=L('أُضيف ✓','Added ✓');setTimeout(()=>{btn.classList.remove('done');btn.textContent=L('أضف للسلة','Add to cart')},1400)}));}
+function add(id){cart[id]=(cart[id]||0)+1;renderCart();toast(L('أُضيف إلى سلتك','Added to your cart'));}
+function renderCart(){const ids=Object.keys(cart).filter(k=>cart[k]>0);const n=ids.reduce((s,k)=>s+cart[k],0);const c=document.getElementById('count');c.textContent=n;c.classList.toggle('show',n>0);
+ const it=document.getElementById('items');if(!ids.length){it.innerHTML=`<div class="empty">${L('سلتك فاضية… ابدأ من المتجر','Your cart is empty. Start in the shop.')}</div>`;}
+ else it.innerHTML=ids.map(k=>{const b=BEANS.find(x=>x.id===k);return `<div class="item"><div class="th"><img src="img/pouch.jpg" alt=""></div><div class="nm"><b>${L(b.ar,b.en)}</b><span>${cur(b.p)} · 250 g</span></div><div class="qty"><button aria-label="${L('إنقاص','Decrease')}" data-d="${k}">−</button><span>${cart[k]}</span><button aria-label="${L('زيادة','Increase')}" data-i="${k}">+</button></div></div>`}).join('');
+ it.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{cart[b.dataset.i]++;renderCart()});it.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{cart[b.dataset.d]--;renderCart()});
+ document.getElementById('total').textContent=cur(ids.reduce((s,k)=>s+cart[k]*BEANS.find(x=>x.id===k).p,0));}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800);}
+const drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim');
+function openCart(o){drawer.classList.toggle('open',o);scrim.classList.toggle('open',o);drawer.setAttribute('aria-hidden',!o);}
+document.getElementById('cartBtn').onclick=()=>openCart(true);document.getElementById('closeCart').onclick=()=>openCart(false);scrim.onclick=()=>openCart(false);
+document.getElementById('checkout').onclick=()=>toast(Object.keys(cart).some(k=>cart[k]>0)?L('الدفع الإلكتروني متاح قريباً مع الافتتاح','Online checkout opens with our launch'):L('أضف منتجاً أولاً','Add a product first'));
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));renderMenu(t.dataset.f);});
+document.getElementById('news').addEventListener('submit',e=>{e.preventDefault();document.getElementById('newsMsg').textContent=L('شكراً لاهتمامك! بنكون على تواصل.','Thanks for your interest! We will be in touch.');e.target.reset();});
+// language
+document.querySelectorAll('[data-en]').forEach(el=>el.dataset.ar=el.innerHTML);
+document.getElementById('langBtn').onclick=()=>{lang=lang==='ar'?'en':'ar';const h=document.documentElement;h.lang=lang;h.dir=lang==='ar'?'rtl':'ltr';
+ document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=lang==='ar'?el.dataset.ar:el.dataset.en);
+ const em=document.getElementById('em');em.placeholder=lang==='ar'?'بريدك الإلكتروني':'Your email';
+ const lb=document.getElementById('langBtn');lb.textContent=lang==='ar'?'EN':'ع';lb.setAttribute('aria-label',lang==='ar'?'Switch to English':'التبديل إلى العربية');
+ const sel=document.querySelector('.tab[aria-selected=true]');renderMenu(sel?sel.dataset.f:'all');renderShop();renderCart();};
+renderMenu();renderShop();renderCart();
+// reveal
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15}):null;
+document.querySelectorAll('.rv').forEach(el=>io?io.observe(el):el.classList.add('in'));
+</script>
+</body>
+</html>
